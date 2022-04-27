@@ -1,0 +1,21 @@
+<clr-datagrid>
+  <clr-dg-column>User ID</clr-dg-column>
+  <clr-dg-column>Name</clr-dg-column>
+  <clr-dg-column>User Name</clr-dg-column>
+  <clr-dg-column>Email</clr-dg-column>
+
+  <clr-dg-row *ngFor="let post of posts">
+    <clr-dg-cell>{{ post.id }}</clr-dg-cell>
+    <clr-dg-cell>{{ post.name }}</clr-dg-cell>
+    <clr-dg-cell>{{ post.username }}</clr-dg-cell>
+    <clr-dg-cell>{{  post.email }}</clr-dg-cell>
+  </clr-dg-row>
+
+  <clr-dg-footer>{{posts.length}} posts</clr-dg-footer>
+</clr-datagrid>
+
+
+<button type="button"
+  (click)="loadPosts()"
+  class="btn btn-success" >Load Post
+</button>
